@@ -36,6 +36,4 @@ for(i in usuario)
 		alert("Usuario o Contrasena incorrecta");
 		}
 	}
-	
-
 }
