@@ -21,21 +21,22 @@ i5=0;
 ifila=0;
 
 function agregarColumna(){
-	if(i2!=ifila){++i5;}
-	if(i5<=5 )
-	{	
-		tablaPadre=document.getElementById("Tabla");
-		filas=tablaPadre.getElementsByTagName("tr");
-		columna=document.createElement("td");
-		cont=document.createTextNode("hola");
-		columna.appendChild(cont);
-		filas[ifila].appendChild(columna);
-		alert(ifila+" "+i2+" "+i5);
+	if(i2!=ifila){
+		++i5;
+		if(i5<=5 )
+		{	
+			tablaPadre=document.getElementById("Tabla");
+			filas=tablaPadre.getElementsByTagName("tr");
+			columna=document.createElement("td");
+			cont=document.createTextNode("hola");
+			columna.appendChild(cont);
+			filas[ifila].appendChild(columna);
+			alert(ifila+" "+i2+" "+i5);
+		}
+		if(i5%5==0){
+			++ifila;
+			i5=0;
+		}
 	}
-	if(i5%5==0){
-		++ifila;
-		i5=0;
-	}
-	
 }
 
