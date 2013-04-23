@@ -11,33 +11,31 @@ tabla.appendChild(lista);
 }
 i2=0;
 function agregarFila(){
-i2++;
-	if(i2==1){
-		agregarColumna;
-		tablaPadre=document.getElementById("Tabla");
-		fila=document.createElement("tr");
-		tablaPadre.appendChild(fila);
-	}
-else{
+
 	tablaPadre=document.getElementById("Tabla");
 	fila=document.createElement("tr");
 	tablaPadre.appendChild(fila);
-
-	}
+++i2;
 }
+i5=0;
+ifila=0;
 
 function agregarColumna(){
-
-	if(i2>0)
+	if(i2!=ifila){++i5;}
+	if(i5<=5 )
 	{	
 		tablaPadre=document.getElementById("Tabla");
 		filas=tablaPadre.getElementsByTagName("tr");
 		columna=document.createElement("td");
 		cont=document.createTextNode("hola");
 		columna.appendChild(cont);
-		
-		filas[0].appendChild(columna);
-		
+		filas[ifila].appendChild(columna);
+		alert(ifila+" "+i2+" "+i5);
 	}
+	if(i5%5==0){
+		++ifila;
+		i5=0;
+	}
+	
 }
 
